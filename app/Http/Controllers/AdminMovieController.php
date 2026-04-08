@@ -12,7 +12,7 @@ class AdminMovieController extends Controller
     public function movie_manager()
     {
         $movies = DB::select("SELECT * FROM movie
-        where status = ? limit 10;", [1]);
+        where status = ?;", [1]);
         return view("movie.movie_manager", compact("movies"));
     }
     public function movie_add()

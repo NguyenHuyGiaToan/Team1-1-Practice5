@@ -91,7 +91,7 @@
                 <td class="text-nowrap">{{$row->release_date}}</td>
                 <td>{{$row->vote_average}}</td>
                 <td style="display:grid; grid-template-columns: auto auto; gap:5px; border-bottom:0px ;">
-                    <a class="btn btn-primary" href="{{route('chitiet',$row->id)}}">Xem</a>
+                    <a class="btn btn-primary" href="{{ url('chitiet/'.$row->id) }}">Xem</a>
                     <form action="{{ route('movie_delete', $row->id) }}" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa phim này?')">
                         @csrf
                         <button type="submit" class="btn btn-danger">
