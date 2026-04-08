@@ -1,6 +1,6 @@
 <x-movie-layout>
     <x-slot name="title">
-        Movie
+        Web Movie - Kết quả tìm kiếm
     </x-slot>
     
     <style>
@@ -37,7 +37,7 @@
     <div class="list-movie">
         @foreach($movies as $movie)
             <div class="movie" style="display: inline-block; margin: 10px; vertical-align: top; width: 200px;">
-                <a href="{{ url('movie/chitiet/'.$movie->id) }}" class="movie-info">  
+                <a href="{{ url('/chitiet/'.$movie->id) }}" class="movie-info">  
                     <img src="{{ asset('storage' . $movie->image) }}">
                     <b>{{ $movie->movie_name_vn }}</b><br/>
                     <i>{{ $movie->release_date }}</i><br>  

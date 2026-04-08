@@ -85,6 +85,12 @@
                 background:#000;
 
             }
+            /*Thêm css cho header của card*/ 
+            .card-header a 
+            {
+                color:#1ed5a9;
+                text-decoration:none;
+            }
         </style>
     </head>
     <body>
@@ -92,7 +98,7 @@
             <div class='banner'>
                 <div style="padding:20px 20px">
                     <h2>Welcome.</h2>
-                    <h3>Millions of movies, TV shows and people to discover. Explore now.
+                    <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
                 </div>
                 <div class='search-input'>
                     <form method="post" action="{{url('/timkiem')}}">
@@ -108,7 +114,7 @@
             <div class='col-3 pr-0'>
                 <div class="card" style="width: 18rem; background-color:#222;color:white;">
                     <div class="card-header">
-                    <i class="fa fa-film" aria-hidden="true"></i> <b>Thể loại phim</b>
+                    <i class="fa fa-film" aria-hidden="true"></i> <a href="{{url('/')}}"><b>Thể loại phim</b></a>
                     </div>
                     <ul class="list-group list-group-flush list-group-movie">
                        @foreach($genre as $row)
