@@ -9,3 +9,6 @@ Route::get('/theloai/{id}', [App\Http\Controllers\MovieController::class, 'thelo
 //
 
 Route::get('/openrouter', [OpenRouterController::class, 'chat']);
+Route::get('/chitiet/{id}', [App\Http\Controllers\DetailMovieController::class, 'chitiet']);
+
+Route::post('/timkiem', [App\Http\Controllers\DetailMovieController::class, 'search']);
